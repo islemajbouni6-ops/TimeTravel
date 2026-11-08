@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:padding="12dp"
+    android:gravity="center_vertical"
+    android:background="#E8EDF4">
+
+    <!-- Image à gauche : poids 0.3 -->
+
+    <ImageView
+        android:id="@+id/img_passeport_ia"
+        android:layout_width="0dp"
+        android:layout_height="220dp"
+        android:layout_weight="0.3"
+        android:src="@android:drawable/ic_menu_myplaces"
+        android:scaleType="centerInside"
+        android:contentDescription="@string/desc_photo_passeport"/>
+
+    <!-- Partie droite : poids 0.7 -->
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.7"
+        android:padding="16dp"
+        android:background="#FFFFFF">
+
+        <TextView
+            android:id="@+id/txt_titre_ia"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/titre_passeport"
+            android:textSize="19sp"
+            android:textStyle="bold"
+            android:textColor="#17365D"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/txt_nom_ia"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txt_titre_ia"
+            android:layout_marginTop="25dp"
+            android:text="@string/label_voyageur"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:id="@+id/txt_age_ia"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txt_nom_ia"
+            android:layout_marginTop="15dp"
+            android:text="@string/label_age_temporel"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:id="@+id/txt_motif_ia"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txt_age_ia"
+            android:layout_marginTop="15dp"
+            android:text="@string/label_motif_passeport"
+            android:textSize="16sp"/>
+
+        <Button
+            android:id="@+id/btn_approuver_ia"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txt_motif_ia"
+            android:layout_marginTop="25dp"
+            android:text="@string/btn_approuver"
+            android:backgroundTint="#16803C"/>
+
+        <Button
+            android:id="@+id/btn_refuser_ia"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btn_approuver_ia"
+            android:layout_marginTop="10dp"
+            android:text="@string/btn_refuser"
+            android:backgroundTint="#C62828"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

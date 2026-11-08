@@ -1,19 +1,75 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:gravity="center"
+    android:background="@color/white">
 
     <TextView
-        android:layout_width="wrap_content"
+        android:id="@+id/txt_titre_ia"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:text="@string/titre_time_travel"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:textColor="@color/blue"
+        android:gravity="center"
+        android:layout_marginBottom="30dp"/>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <EditText
+        android:id="@+id/et_nom_ia"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textColorHint="@color/blue"
+        android:hint="@string/hint_nom_voyageur"
+        android:inputType="textPersonName"/>
+
+    <EditText
+        android:id="@+id/et_naissance_ia"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textColorHint="@color/blue"
+        android:hint="@string/hint_annee_naissance"
+        android:inputType="number"/>
+
+    <EditText
+        android:id="@+id/et_destination_ia"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textColorHint="@color/blue"
+        android:hint="@string/hint_annee_destination"
+        android:inputType="number"/>
+
+    <TextView
+        android:id="@+id/txt_motif_ia"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/label_motif"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:layout_marginTop="15dp"/>
+
+    <Spinner
+        android:id="@+id/sp_motif_ia"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:entries="@array/motifs"/>
+
+    <Button
+        android:id="@+id/btn_inspecter_ia"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_inspecter_profil"
+        android:layout_marginTop="30dp"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/blue"/>
+
+</LinearLayout>
